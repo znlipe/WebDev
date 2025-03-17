@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<head>
+    <title>About me</title>
+    <h1 id="nome" class="header" onclick="redirectHome()">Felipe Zanluca</h1>
+</head>    
+
+<body>
+    <button class="botao" id="home" onclick="redirectHome()">Home</button>
+    <button class="botao" id="githublink" onclick="redirect()">GitHub</button>
+    <p>Olá, meu nome é Felipe Zanluca, sou graduado em Analise e Desenvolvimento pela Universidade Uniavan. 
+    <br>
+    Atualmente, estou cursando Pós-graduação em full-stack pela PUC-RS. </p>
+</body>
+
+<script>
+    console.log("Hello World, I'm Felipe Zanluca, a full-stack developer");
+    function redirect() {
+        var url = "https://github.com/znlipe";
+        window.open(url);
+    }
+    function redirectHome(){
+        var urlHome = "../Home.html";
+        window.location.replace(urlHome);
+    }
+
+    // document.body.innerHTML = "I'm Felipe Zanluca";
+</script>
+
+</html>

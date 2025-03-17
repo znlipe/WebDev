@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora</title>
+
+<a href="Home.html">Home</a>
+
+    <br>
+    <br>
+
+<input type="number" id="lengthTrip" placeholder="Distancia em KM" /> 
+
+    <br>
+    <br>
+
+<input type="number" id="timeTrip" placeholder="Tempo em minutos" />
+
+    <br>
+    <br>
+
+<button id="submit" onclick="submit()">
+    Calcular
+</button>
+
+
+<script>
+
+    var tarifaDinamica = 1.4;
+    var valorBaseTempo = 0.5;
+    var valorBase = 2;
+
+    function valueFormat(valueReceived){
+        var formatedValue = valueReceived.toFixed(2).replace('.' , ',')
+        return formatedValue;
+    }
+
+    function submit(){
+    //validar na entrada / Fail Fast Validations
+    if(lengthTrip.value && timeTrip.value != 0)
+    { //calcular a corrida
+        
+    var calcKm = lengthTrip.value  * tarifaDinamica;
+    var calcMin = timeTrip.value * valorBaseTempo;
+    var result = calcKm / calcMin;
+        alert('Valor da Corrida = R$' + valueFormat(result));
+
+    }else 
+        {
+            result = valorBase;
+        alert('Valores estao em branco, aplicando valor base da corrida. R$' + valueFormat(result));
+        }    
+
+    }
+
+
+/*
+# App de Corrida:
+Preco basse da Corrida
+Custo fixo
+Horarios e regioes de maior movimento
+
+
+- distanciaKm
+- tempoMinutos
+*/
+</script> 
