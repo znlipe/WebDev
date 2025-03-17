@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Home - First App</title>
+<h1>Welcome to the First App</h1>
+
+<button id="refreshBttn" onclick="window.location.reload(true)">Refresh Page</a>
+<button id="aboutMeBttn" onclick="whatId(this)">About Me</button>   
+<button id="meuButao" onclick="whatId(this)">Github</button>
+<button id="calcUber" onclick="whatId(this)">Calculadora Uber</button>
+<button id="calcConsumo" onclick="whatId(this)">Calcular consumo medio</button>
+
+<p>This is the home page of the First App.</p>
+
+<!-- <script src = "start.js">  </script> -->
+
+<script type="text/javascript">
+    function feedback() {
+        alert("Thank you for your feedback!");
+    }
+
+    function whatId(elemento){
+       var idButton = elemento.id;
+       return redirect(idButton); 
+    }
+
+    function redirect(idBttn) {
+        //funcao para os bottoes irem para a aba correta olhando o id do botao utilizando a funcao whatId para pegar o id do botao.
+        if(idBttn == "meuButao"){
+            //Acessa meu github
+        var url =  "https://github.com/znlipe"
+        //como vem de um link externo, utilizo o "open" para redirecionar o usuario a uma nova aba.
+        window.open(url);
+        } else if (idBttn == "calcUber"){
+            //acessa doc "calculaUber"
+        var url = "calculaUber.html"
+        //utilizei de "location" e "replace" para redirecionar para a pagina de calculaUber na mesma aba.
+        window.location.replace(url);
+        } else if (idBttn == "calcConsumo"){
+            var url = "calculadoraConsumo.html"
+            window.location.replace(url);
+        } else if (idBttn == "aboutMeBttn"){
+            var url = "aboutMe/index.html"
+            window.location.replace(url);
+    }
+}
+</script>
