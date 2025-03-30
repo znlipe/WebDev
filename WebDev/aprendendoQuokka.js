@@ -46,3 +46,35 @@ for (let i = 1; i < fibonacci.length; i++) {
     ? slice: retorna uma cópia do array
     ? at(pos) ou [pos]: retorna elemento de posição especificada por pos
 */
+
+
+// Criacao de dicionarios (Maps) utilizando exemplo de contatos
+
+const contatos = new Map(); // Cria um novo mapa
+
+contatos.set(0, {nome: 'Felipe', cargo: 'Desenvolvedor', idade: 25}); // Adiciona elemento 0 ao mapa
+contatos.set(1, {nome: 'Bruno', cargo: 'Desenvolvedor PL', idade: 29}); // Adiciona elemento 1 ao mapa
+contatos.set("Desenvolvedor", {nome: 'Felipe', cargo: 'Desenvolvedor', idade: 25}); // Adiciona elemento 2 ao mapa com chave string
+contatos.set("Desenvolvedor PL", {nome: 'Bruno', cargo: 'Desenvolvedor PL', idade: 29}); // Adiciona elemento 3 ao mapa com chave string
+
+contatos.get(0); // Retorna o valor associado a chave 0
+contatos.get(1); // Retorna o valor associado a chave 1 
+contatos.get("Desenvolvedor"); // Retorna o valor associado a chave "Desenvolvedor"
+contatos.get("Desenvolvedor PL"); // Retorna o valor associado a chave "Desenvolvedor PL"
+
+console.log(contatos.get(0)); // Exibe o elemento 0 do mapa
+console.log(contatos.get("Desenvolvedor PL")); // Exibe o elemento 3 do mapa 
+contatos.get(0).nome; // Retorna o nome do elemento 0 do mapa
+contatos.get(0).cargo; // Retorna o cargo do elemento 0 do mapa
+
+
+for(i = 0; i < contatos.size; i++){
+  console.log(contatos.get(i));
+  } 
+// laco para exibir os elementos do mapa, porem os elementos com chave string não são exibidos
+// Notas: O correto é utilizar o forEach para percorrer o mapa, pois o for não funciona corretamente com o Map.
+
+// Exemplo de forEach para percorrer o mapa
+contatos.forEach((key, value) => {
+  console.log(key, value);
+  });
