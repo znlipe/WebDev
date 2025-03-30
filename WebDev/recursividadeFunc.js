@@ -1,10 +1,15 @@
-// ##### Recursividade #####
+// ##### Recursividade ##### Arvores Binarias #####
 /* A recursividade é uma técnica de programação onde uma função chama a si mesma para resolver um problema.
 Isso é útil para resolver problemas que podem ser divididos em subproblemas menores e semelhantes.
+
+Fonte a ser utilizada nesse estudo: 
+• https://github.com/loiane/javascript-datastructures-algorithms/blob/main/src/js/data-structures/binary-search-tree.js
+• https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/master/src/data-structures/trees/binary-tree-node.js
+
 */
 
 // Exemplo de recursão: calcular o fatorial de um número
-function fatorialRecursivo(n){
+function fatorialRecursivo(n) {
     if (n === 0 || n === 1) {
         return 1; // Caso base: o fatorial de 0 ou 1 é 1
     }
